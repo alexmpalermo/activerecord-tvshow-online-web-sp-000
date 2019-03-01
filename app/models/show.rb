@@ -23,10 +23,10 @@ class Show < ActiveRecord::Base
   end 
   
   def Show.popular_shows
-    Show.where("rating: > 5")
+    Show.where("rating > 5")
   end 
   
   def Show.shows_by_alphabetical_order
-    Show.order(name: :desc)
+    Show.order(name: :asc)
   end
 end
